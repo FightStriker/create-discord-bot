@@ -1,0 +1,16 @@
+{
+  "NTY4MjYwMzExMzI1MzQzNzg0.XMCV0Q.sARF8s2KIEM-TntfmERG-IPRL21": ""
+    
+const config = (() => {
+  const { TOKEN } =
+    process.env.NODE_ENV === 'production' ? process.env : require('../config');
+
+  return { TOKEN };
+})();
+
+module.exports = {
+  token: config.TOKEN,
+  prefix: '.',
+  commandDelimiter: '\n',
+  commandLimit: '5'
+};
